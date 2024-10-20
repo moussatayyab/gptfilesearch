@@ -1,0 +1,18 @@
+<!-- <button (click)="getThreadData()">Create Thread</button>
+ <button (click)="createThreadMessage()">createThreadMessage</button> 
+<button (click)="runThread()">runThread</button>-->
+<!-- <button (click)="listThreadMessages()">listThreadMessages</button> -->
+
+
+
+ <nz-spin nzTip="Working..." [nzSpinning]="isSpinning" [nzSize]="'large'">
+<div style="padding: 50px;">
+    <textarea placeholder="Input your question" rows="4" nz-input [(ngModel)]="prompt"></textarea>
+    <button style="width: 100%; margin-top: 10px;" nz-button nzType="primary" (click)="getThreadData()">Submit</button>
+
+    <div style="margin-top: 20px;" class="code-box" *ngIf="response">
+        {{response}}
+        <!-- This will render the response in a styled box similar to how I display code, with a monospace font, light background, and a border to emphasize it as a code block. -->
+    </div>
+</div>
+ </nz-spin>
